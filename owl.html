@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="my">
 <head>
@@ -175,7 +174,7 @@
             <!-- Categories -->
             <div>
                 <h3 class="font-bold mb-3 text-lg animate__animated animate__fadeIn">Categories</h3>
-                <div class="grid grid-cols-2 gap-4">
+                <div class="grid grid-cols-3 gap-4">
                     <!-- Custom 1 -->
                     <a href="#" class="category-link animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
                         <div class="liquid-card p-4 rounded-xl flex flex-col items-center justify-center text-center space-y-2 h-full transition-colors hover:bg-amber-50/50">
@@ -194,17 +193,26 @@
                             <p class="font-semibold text-sm text-orange-900">Custom 2</p>
                         </div>
                     </a>
-                    <!-- Football Live -->
-                    <a href="#" class="category-link animate__animated animate__fadeInUp" style="animation-delay: 0.3s;">
+                    <!-- Accounts -->
+                    <a href="#" id="accounts-btn" class="category-link animate__animated animate__fadeInUp" style="animation-delay: 0.3s;">
+                        <div class="liquid-card p-4 rounded-xl flex flex-col items-center justify-center text-center space-y-2 h-full transition-colors hover:bg-green-50/50">
+                            <div class="bg-gradient-to-br from-green-200 to-green-100 p-3 rounded-full shadow-inner">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-700"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+                            </div>
+                            <p class="font-semibold text-sm text-green-900">အကောင့်များ</p>
+                        </div>
+                    </a>
+                     <!-- Football Live -->
+                    <a href="#" class="category-link animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
                         <div class="liquid-card p-4 rounded-xl flex flex-col items-center justify-center text-center space-y-2 h-full transition-colors hover:bg-red-50/50">
                             <div class="bg-gradient-to-br from-red-200 to-red-100 p-3 rounded-full shadow-inner">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-700"><path d="M4.17 11H4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h.17"></path><path d="M10.29 20.83H14.7a2 2 0 0 0 2-2V11.41a2 2 0 0 0-2-2h-4.42a2 2 0 0 0-2 2v7.42a2 2 0 0 0 2 2z"></path><path d="M20 12v4"></path><path d="M17 12v2"></path><circle cx="6.5" cy="17.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-700"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><polyline points="17 2 12 7 7 2"></polyline></svg>
                             </div>
                             <p class="font-semibold text-sm text-red-900">Football Live</p>
                         </div>
                     </a>
                     <!-- Football News -->
-                    <a href="#" class="category-link animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+                    <a href="#" class="category-link animate__animated animate__fadeInUp" style="animation-delay: 0.5s;">
                         <div class="liquid-card p-4 rounded-xl flex flex-col items-center justify-center text-center space-y-2 h-full transition-colors hover:bg-sky-50/50">
                             <div class="bg-gradient-to-br from-sky-200 to-sky-100 p-3 rounded-full shadow-inner">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-sky-700"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
@@ -315,6 +323,38 @@
         </div>
     </div>
     
+    <!-- Accounts Modal -->
+    <div id="accounts-modal" class="fixed inset-0 bg-black/60 flex justify-center items-center z-50 hidden backdrop-blur-sm">
+        <div class="bg-white p-6 rounded-2xl shadow-xl w-11/12 max-w-sm animate__animated animate__zoomIn liquid-card">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-bold">Game အကောင့်များ</h2>
+                <button id="close-accounts-modal-btn" class="text-gray-500 hover:text-gray-800 text-2xl ripple">&times;</button>
+            </div>
+            <div class="space-y-4">
+                <!-- Game 1 Account -->
+                <div class="flex items-center gap-3">
+                    <img src="https://placehold.co/48x48/7e22ce/ffffff?text=G1" alt="Game 1" class="w-12 h-12 rounded-lg shadow-md">
+                    <div class="flex-1">
+                        <p class="font-semibold text-sm">Mobile Legends</p>
+                        <p class="text-xs text-gray-600">Username: <span id="g1-user">user_mlbb_123</span></p>
+                        <p class="text-xs text-gray-600">Password: <span id="g1-pass">pass12345</span></p>
+                    </div>
+                    <button onclick="copyCredentials('g1')" class="bg-gray-200 text-gray-700 px-3 py-1.5 rounded-lg font-semibold text-xs hover:bg-gray-300 w-20 ripple">Copy</button>
+                </div>
+                <!-- Game 2 Account -->
+                <div class="flex items-center gap-3">
+                    <img src="https://placehold.co/48x48/16a34a/ffffff?text=G2" alt="Game 2" class="w-12 h-12 rounded-lg shadow-md">
+                    <div class="flex-1">
+                        <p class="font-semibold text-sm">PUBG Mobile</p>
+                        <p class="text-xs text-gray-600">Username: <span id="g2-user">player_pubg_pro</span></p>
+                        <p class="text-xs text-gray-600">Password: <span id="g2-pass">securePass99</span></p>
+                    </div>
+                    <button onclick="copyCredentials('g2')" class="bg-gray-200 text-gray-700 px-3 py-1.5 rounded-lg font-semibold text-xs hover:bg-gray-300 w-20 ripple">Copy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- Custom Alert Box -->
     <div id="custom-alert" class="fixed top-5 right-5 text-white px-6 py-3 rounded-lg shadow-lg hidden transition-all duration-300 transform translate-x-full liquid-card backdrop-blur-sm">
         <div class="flex items-center gap-2">
@@ -326,7 +366,6 @@
     <script>
         // --- State Management ---
         let mainWalletBalance = 15000;
-        // Hidden state for game balances for prototype demonstration
         let game1Balance = 0;
         let game2Balance = 0;
 
@@ -340,12 +379,15 @@
         const customAlert = document.getElementById('custom-alert');
         const alertMessage = document.getElementById('alert-message');
         const alertIcon = document.getElementById('alert-icon');
-       
+        const accountsBtn = document.getElementById('accounts-btn');
+        const accountsModal = document.getElementById('accounts-modal');
+        const closeAccountsModalBtn = document.getElementById('close-accounts-modal-btn');
+        
         // --- Utility Functions ---
         function formatCurrency(num) {
             return `${num.toLocaleString('en-US')} Ks`;
         }
-       
+        
         function showAlert(message, isError = false) {
             alertMessage.textContent = message;
             customAlert.classList.remove('hidden', 'translate-x-full', 'bg-amber-500', 'bg-red-500', 'text-black', 'text-white');
@@ -354,24 +396,24 @@
                 customAlert.classList.add('bg-red-500', 'text-white');
                 alertIcon.innerHTML = '<circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>';
             } else {
-                customAlert.classList.add('bg-amber-500', 'text-black');
+                customAlert.classList.add('bg-green-500', 'text-white');
                 alertIcon.innerHTML = '<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline>';
             }
-           
+            
+            customAlert.classList.remove('hidden');
             setTimeout(() => {
                 customAlert.classList.remove('translate-x-full');
             }, 10);
 
             setTimeout(() => {
                 customAlert.classList.add('translate-x-full');
-                 setTimeout(() => {
-                    customAlert.classList.add('hidden');
-                }, 300);
+                    setTimeout(() => {
+                        customAlert.classList.add('hidden');
+                    }, 300);
             }, 3000);
         }
 
         function updateWalletDisplay() {
-            // Add animation to balance change
             mainWalletBalanceEl.classList.add('animate__animated', 'animate__pulse');
             setTimeout(() => {
                 mainWalletBalanceEl.textContent = formatCurrency(mainWalletBalance);
@@ -381,29 +423,35 @@
             }, 100);
         }
 
+        // --- Modal Opening/Closing ---
+        function openModal(modal) {
+            modal.classList.remove('hidden');
+            modal.querySelector('.liquid-card').classList.remove('animate__zoomOut');
+            modal.querySelector('.liquid-card').classList.add('animate__zoomIn');
+        }
+
+        function closeModal(modal) {
+            modal.querySelector('.liquid-card').classList.remove('animate__zoomIn');
+            modal.querySelector('.liquid-card').classList.add('animate__zoomOut');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
         // --- Event Listeners ---
-        topUpBtn.addEventListener('click', () => {
-            topUpModal.classList.remove('hidden');
-            topUpModal.querySelector('.liquid-card').classList.add('animate__zoomIn');
-            topUpModal.querySelector('.liquid-card').classList.remove('animate__zoomOut');
+        topUpBtn.addEventListener('click', () => openModal(topUpModal));
+        closeModalBtn.addEventListener('click', () => closeModal(topUpModal));
+        topUpModal.addEventListener('click', (event) => {
+            if (event.target === topUpModal) closeModal(topUpModal);
         });
 
-        closeModalBtn.addEventListener('click', () => {
-            topUpModal.querySelector('.liquid-card').classList.remove('animate__zoomIn');
-            topUpModal.querySelector('.liquid-card').classList.add('animate__zoomOut');
-            setTimeout(() => {
-                topUpModal.classList.add('hidden');
-            }, 300);
+        accountsBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal(accountsModal);
         });
-       
-        topUpModal.addEventListener('click', (event) => {
-            if (event.target === topUpModal) {
-                topUpModal.querySelector('.liquid-card').classList.remove('animate__zoomIn');
-                topUpModal.querySelector('.liquid-card').classList.add('animate__zoomOut');
-                setTimeout(() => {
-                    topUpModal.classList.add('hidden');
-                }, 300);
-            }
+        closeAccountsModalBtn.addEventListener('click', () => closeModal(accountsModal));
+        accountsModal.addEventListener('click', (event) => {
+            if (event.target === accountsModal) closeModal(accountsModal);
         });
 
         confirmTopUpBtn.addEventListener('click', () => {
@@ -412,24 +460,16 @@
                 showAlert('ကျေးဇူးပြု၍ မှန်ကန်သော ငွေပမာဏကို ထည့်ပါ။', true);
                 return;
             }
-           
-            // Add loading animation
+            
             confirmTopUpBtn.innerHTML = '<svg class="animate-spin -ml-1 mr-2 h-5 w-5 text-black inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Processing...';
             
-            // Simulate API call
             setTimeout(() => {
                 mainWalletBalance += amount;
                 updateWalletDisplay();
                 showAlert(`${formatCurrency(amount)} ဖြည့်သွင်းပြီးပါပြီ။`);
                 topUpAmountInput.value = '';
                 confirmTopUpBtn.textContent = 'ငွေဖြည့်ခြင်း အတည်ပြုပါ';
-                
-                // Close modal
-                topUpModal.querySelector('.liquid-card').classList.remove('animate__zoomIn');
-                topUpModal.querySelector('.liquid-card').classList.add('animate__zoomOut');
-                setTimeout(() => {
-                    topUpModal.classList.add('hidden');
-                }, 300);
+                closeModal(topUpModal);
             }, 1500);
         });
 
@@ -450,12 +490,9 @@
 
             mainWalletBalance -= amount;
             const gameName = gameId === 1 ? 'Mobile Legends' : 'PUBG Mobile';
-            if (gameId === 1) {
-                game1Balance += amount;
-            } else {
-                game2Balance += amount;
-            }
-           
+            if (gameId === 1) game1Balance += amount;
+            else game2Balance += amount;
+            
             updateWalletDisplay();
             showAlert(`${gameName} သို့ ${formatCurrency(amount)} ဖြည့်သွင်းပြီးပါပြီ။`);
             inputEl.value = '';
@@ -469,15 +506,11 @@
                 showAlert('ကျေးဇူးပြု၍ ထုတ်ယူလိုသော ပမာဏကို ထည့်ပါ။', true);
                 return;
             }
-           
+            
             const gameName = gameId === 1 ? 'Mobile Legends' : 'PUBG Mobile';
-           
-            // For prototype: update balances assuming request is approved.
-            if (gameId === 1) {
-                game1Balance -= amount;
-            } else {
-                game2Balance -= amount;
-            }
+            
+            if (gameId === 1) game1Balance -= amount;
+            else game2Balance -= amount;
             mainWalletBalance += amount;
 
             updateWalletDisplay();
@@ -485,36 +518,29 @@
             inputEl.value = '';
         }
 
-        // Add ripple effect to all ripple buttons
-        document.querySelectorAll('.ripple').forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                let x = e.clientX - e.target.getBoundingClientRect().left;
-                let y = e.clientY - e.target.getBoundingClientRect().top;
-                
-                let ripples = document.createElement('span');
-                ripples.style.left = x + 'px';
-                ripples.style.top = y + 'px';
-                this.appendChild(ripples);
-                
-                setTimeout(() => {
-                    ripples.remove();
-                }, 1000);
-            });
-        });
+        // --- Copy Credentials ---
+        function copyCredentials(gamePrefix) {
+            const user = document.getElementById(`${gamePrefix}-user`).innerText;
+            const pass = document.getElementById(`${gamePrefix}-pass`).innerText;
+            const textToCopy = `Username: ${user}\nPassword: ${pass}`;
+
+            const textArea = document.createElement('textarea');
+            textArea.value = textToCopy;
+            document.body.appendChild(textArea);
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showAlert('အကောင့်အချက်အလက်ကို ကူးယူပြီးပါပြီ။');
+            } catch (err) {
+                showAlert('ကူးယူရန် မအောင်မြင်ပါ', true);
+            }
+            document.body.removeChild(textArea);
+        }
 
         // --- Initial Setup ---
         window.onload = function() {
             updateWalletDisplay();
-            
-            // Animate elements on load
-            document.querySelectorAll('.animate__animated').forEach((el, index) => {
-                setTimeout(() => {
-                    el.style.opacity = 1;
-                }, index * 100);
-            });
         };
-
     </script>
 </body>
 </html>
