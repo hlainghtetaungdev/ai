@@ -241,30 +241,28 @@
             <div class="liquid-card p-4 rounded-2xl space-y-4 animate__animated animate__fadeIn">
                 <h3 class="font-bold text-lg">Game Top Up</h3>
                 <div class="space-y-4">
-                    <!-- Game 1 -->
+                    <!-- Ibet 789 -->
                     <div class="flex items-center gap-3 animate__animated animate__fadeInLeft">
                         <div class="relative">
-                            <img src="https://placehold.co/48x48/7e22ce/ffffff?text=G1" alt="Game 1" class="w-12 h-12 rounded-lg shadow-md">
-                            <div class="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white"></div>
+                            <img src="https://placehold.co/48x48/7e22ce/ffffff?text=Ibet" alt="Ibet 789" class="w-12 h-12 rounded-lg shadow-md">
                         </div>
                         <div class="flex-1">
-                            <p class="font-semibold">Mobile Legends</p>
-                            <input type="number" placeholder="ပမာဏ" class="w-full mt-1 p-2 border rounded-md text-sm focus:ring-amber-500 focus:border-amber-500 focus:outline-none focus:shadow-md transition-all">
+                            <p class="font-semibold">Ibet 789</p>
+                            <input type="number" id="game1-amount" placeholder="ပမာဏ" class="w-full mt-1 p-2 border rounded-md text-sm focus:ring-amber-500 focus:border-amber-500 focus:outline-none focus:shadow-md transition-all">
                         </div>
                         <div class="flex flex-col gap-2">
                             <button onclick="transferToGame(1)" class="liquid-button text-black px-3 py-1.5 rounded-lg font-semibold text-xs hover:bg-amber-600 w-20 ripple">ဖြည့်မည်</button>
                             <button onclick="withdrawFromGame(1)" class="bg-gray-200 text-gray-700 px-3 py-1.5 rounded-lg font-semibold text-xs hover:bg-gray-300 w-20 ripple">ထုတ်မည်</button>
                         </div>
                     </div>
-                    <!-- Game 2 -->
+                    <!-- 555Mix -->
                     <div class="flex items-center gap-3 animate__animated animate__fadeInLeft" style="animation-delay: 0.1s;">
                         <div class="relative">
-                            <img src="https://placehold.co/48x48/16a34a/ffffff?text=G2" alt="Game 2" class="w-12 h-12 rounded-lg shadow-md">
-                            <div class="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white"></div>
+                            <img src="https://placehold.co/48x48/16a34a/ffffff?text=555M" alt="555Mix" class="w-12 h-12 rounded-lg shadow-md">
                         </div>
                         <div class="flex-1">
-                            <p class="font-semibold">PUBG Mobile</p>
-                            <input type="number" placeholder="ပမာဏ" class="w-full mt-1 p-2 border rounded-md text-sm focus:ring-amber-500 focus:border-amber-500 focus:outline-none focus:shadow-md transition-all">
+                            <p class="font-semibold">555Mix</p>
+                            <input type="number" id="game2-amount" placeholder="ပမာဏ" class="w-full mt-1 p-2 border rounded-md text-sm focus:ring-amber-500 focus:border-amber-500 focus:outline-none focus:shadow-md transition-all">
                         </div>
                         <div class="flex flex-col gap-2">
                             <button onclick="transferToGame(2)" class="liquid-button text-black px-3 py-1.5 rounded-lg font-semibold text-xs hover:bg-amber-600 w-20 ripple">ဖြည့်မည်</button>
@@ -331,25 +329,25 @@
                 <button id="close-accounts-modal-btn" class="text-gray-500 hover:text-gray-800 text-2xl ripple">&times;</button>
             </div>
             <div class="space-y-4">
-                <!-- Game 1 Account -->
+                <!-- Ibet 789 Account -->
                 <div class="flex items-center gap-3">
-                    <img src="https://placehold.co/48x48/7e22ce/ffffff?text=G1" alt="Game 1" class="w-12 h-12 rounded-lg shadow-md">
+                    <img src="https://placehold.co/48x48/7e22ce/ffffff?text=Ibet" alt="Ibet 789" class="w-12 h-12 rounded-lg shadow-md">
                     <div class="flex-1">
-                        <p class="font-semibold text-sm">Mobile Legends</p>
-                        <p class="text-xs text-gray-600">Username: <span id="g1-user">user_mlbb_123</span></p>
-                        <p class="text-xs text-gray-600">Password: <span id="g1-pass">pass12345</span></p>
+                        <p class="font-semibold text-sm">Ibet 789</p>
+                        <p class="text-xs text-gray-600">Username: <span id="ibet-user">user_ibet_123</span></p>
+                        <p class="text-xs text-gray-600">Password: <span id="ibet-pass">pass12345</span></p>
                     </div>
-                    <button onclick="copyCredentials('g1')" class="bg-gray-200 text-gray-700 px-3 py-1.5 rounded-lg font-semibold text-xs hover:bg-gray-300 w-20 ripple">Copy</button>
+                    <button onclick="copyCredentials('ibet')" class="bg-gray-200 text-gray-700 px-3 py-1.5 rounded-lg font-semibold text-xs hover:bg-gray-300 w-20 ripple">Copy</button>
                 </div>
-                <!-- Game 2 Account -->
+                <!-- 555Mix Account -->
                 <div class="flex items-center gap-3">
-                    <img src="https://placehold.co/48x48/16a34a/ffffff?text=G2" alt="Game 2" class="w-12 h-12 rounded-lg shadow-md">
+                    <img src="https://placehold.co/48x48/16a34a/ffffff?text=555M" alt="555Mix" class="w-12 h-12 rounded-lg shadow-md">
                     <div class="flex-1">
-                        <p class="font-semibold text-sm">PUBG Mobile</p>
-                        <p class="text-xs text-gray-600">Username: <span id="g2-user">player_pubg_pro</span></p>
-                        <p class="text-xs text-gray-600">Password: <span id="g2-pass">securePass99</span></p>
+                        <p class="font-semibold text-sm">555Mix</p>
+                        <p class="text-xs text-gray-600">Username: <span id="555mix-user">player_555_pro</span></p>
+                        <p class="text-xs text-gray-600">Password: <span id="555mix-pass">securePass99</span></p>
                     </div>
-                    <button onclick="copyCredentials('g2')" class="bg-gray-200 text-gray-700 px-3 py-1.5 rounded-lg font-semibold text-xs hover:bg-gray-300 w-20 ripple">Copy</button>
+                    <button onclick="copyCredentials('555mix')" class="bg-gray-200 text-gray-700 px-3 py-1.5 rounded-lg font-semibold text-xs hover:bg-gray-300 w-20 ripple">Copy</button>
                 </div>
             </div>
         </div>
@@ -489,7 +487,7 @@
             }
 
             mainWalletBalance -= amount;
-            const gameName = gameId === 1 ? 'Mobile Legends' : 'PUBG Mobile';
+            const gameName = gameId === 1 ? 'Ibet 789' : '555Mix';
             if (gameId === 1) game1Balance += amount;
             else game2Balance += amount;
             
@@ -507,14 +505,16 @@
                 return;
             }
             
-            const gameName = gameId === 1 ? 'Mobile Legends' : 'PUBG Mobile';
+            // This is a prototype, so we don't check the actual game balance.
+            // We assume the request is valid.
+            mainWalletBalance += amount;
+            const gameName = gameId === 1 ? 'Ibet 789' : '555Mix';
             
             if (gameId === 1) game1Balance -= amount;
             else game2Balance -= amount;
-            mainWalletBalance += amount;
 
             updateWalletDisplay();
-            showAlert('ငွေထုတ်ရန် တောင်းဆိုမှု လက်ခံရရှိပါသည်။', false);
+            showAlert(`${gameName} မှ ${formatCurrency(amount)} ထုတ်ယူပြီးပါပြီ။`);
             inputEl.value = '';
         }
 
